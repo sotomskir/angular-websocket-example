@@ -1,0 +1,8 @@
+<form [formGroup]="form">
+<md-list>
+  <md-list-item *ngFor="let task of tasks">
+    <md-slide-toggle [formControlName]="task.id">{{task.name}}</md-slide-toggle>
+  </md-list-item>
+</md-list>
+  {{form.value | json}}
+</form>
